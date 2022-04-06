@@ -48,3 +48,7 @@ button {
 button:hover {
     background: gray;
 }
+
+#location{
+    display: none;
+}
