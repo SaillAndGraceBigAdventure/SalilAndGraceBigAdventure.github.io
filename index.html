@@ -10,6 +10,16 @@
 <link rel="stylesheet" href="style.css">
 
 <!-- nerd. -->
+<script>
+    function ShowLocation() {
+    var x = document.getElementById("location");
+    if (x.style.display === "block") {
+      x.style.display = "none";
+    } else {
+      x.style.display = "block";
+    }
+  }
+</script>
 
 <div class="clue">
   <h1 style="text-align:center">
@@ -17,13 +27,8 @@
     <br>
     <br>
 
-  <button id="myButton"><h2>LET'S GET IT</h2></button>  
+  <button onclick="ShowLocation()"><h2>LET'S GET IT</h2></button>  
+  <h2 style="text-align: center" id="location"><a href="SalilsBigAdventure.github.io/puzzle1.html">SalilsBigAdventure.github.io/puzzle1.html</a></h2>
 </div>
-
-<script>
-  document.getElementById("myButton").onclick = function() {
-    window.open("SalilsBigAdventure.github.io/puzzle1.html", "_blank");
-  }
-</script>
 
 </html>
