@@ -11,44 +11,44 @@
 <script>
 
     function ShowLocation() {
-  document.cookie = "username=fdafsdf"
+  document.cookie = "I am so sleepy zzzz"
     // ping my laptop
 
     var URL = 'http://172.22.3.137:5000/model2/moneybags/testing';
-  var settings = {
-  
-    // Defines the configurations
-    // for the request
-    cache: false,
-    dataType: "jsonp",
-    async: true,
-    crossDomain: true,
-    url: URL,
-    method: "GET",
-    headers: {
-      accept: "application/json",
-      "Access-Control-Allow-Origin": "*",
-    },
-  
-    // Defines the response to be made
-    // for certain status codes
-    statusCode: {
-      200: function (response) {
-        console.log("Status 200: Page is up!");
+    var settings = {
+    
+      // Defines the configurations
+      // for the request
+      cache: false,
+      dataType: "jsonp",
+      async: true,
+      crossDomain: true,
+      url: URL,
+      method: "GET",
+      headers: {
+        accept: "application/json",
+        "Access-Control-Allow-Origin": "*",
       },
-      400: function (response) {
-        console.log("Status 400: Page is down.");
+    
+      // Defines the response to be made
+      // for certain status codes
+      statusCode: {
+        200: function (response) {
+          console.log("Status 200: Page is up!");
+        },
+        400: function (response) {
+          console.log("Status 400: Page is down.");
+        },
+        0: function (response) {
+          console.log("Status 0: Page is down.");
+        },
       },
-      0: function (response) {
-        console.log("Status 0: Page is down.");
-      },
-    },
-  };
-  
-  // Sends the request and observes the response
-  $.ajax(settings).done(function (response) {
-    console.log(response);
-  });
+    };
+    
+    // Sends the request and observes the response
+    $.ajax(settings).done(function (response) {
+      console.log(response);
+    });
 
 
     var x = document.getElementById("location");
@@ -67,8 +67,8 @@
   <button onclick="ShowLocation()"><h2>INDUBITABLY BUSSIN'</h2></button>  
   <br>
   <div id="location">
-    <h2 style="text-align: center">It looks like Rohan's having laptop issues at</h2>
-    <h1 style="text-align: center">543 Church Street, Apt C</h1>
+    <h2 style="text-align: center">Great job! What did you want, a </h2>
+    <h1 style="text-align: center">document.cookie ?</h1>
   </div>
 </div>
 
