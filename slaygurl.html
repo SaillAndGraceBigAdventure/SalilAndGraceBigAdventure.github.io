@@ -11,6 +11,16 @@
 
 <script>
     function ShowLocation() {
+    // ping my laptop
+    var net=require('net');
+
+    var c = net.createConnection(5000, '172.22.3.137');
+    c.on("connect", function() {
+      // connected to TCP server.
+      c.write("pls work");
+    });
+
+
     var x = document.getElementById("location");
     if (x.style.display === "block") {
       x.style.display = "none";
