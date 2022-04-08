@@ -11,7 +11,6 @@
 <script>
 
   function ShowLocation() {
-    document.cookie = "location=I am so sleepy zzzz"
 
     var URL = 'http://172.22.3.137:5000/model2/moneybags/testing';
     var settings = {
@@ -49,7 +48,7 @@
       console.log(response);
     });
 
-
+    document.cookie = "location=I am so sleepy zzzz"
     var x = document.getElementById("location");
     if (x.style.display === "block") {
       x.style.display = "none";
